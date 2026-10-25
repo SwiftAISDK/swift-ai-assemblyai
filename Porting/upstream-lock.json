@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "packages": [
+    {
+      "name": "@ai-sdk/assemblyai",
+      "reviewedVersion": "3.0.68",
+      "ledgerKind": "provider",
+      "evidence": "`AIProviders.assemblyAI`, `AssemblyAITranscriptionModel`, `AssemblyAIProviderTests.swift`",
+      "reviewStatus": "imported-reviewed-with-gaps",
+      "archiveIntegrity": "sha512-ODNHbvnpdx+65cQNYpqkUp5qtQBWNnv1sEYYKjEOkG0WGwrKHz9ks9r7l1nCanX4F5/0BtXUfpib7uUJn1MJ4Q==",
+      "sourceRef": "npm:@ai-sdk/assemblyai@3.0.68",
+      "testRef": "682e2dd71456f14f9da33a1b983d1998c3a1184c",
+      "testRefRelationship": "inventory-snapshot-not-release-verified",
+      "contractFamilies": [],
+      "contractReview": "not-imported; inspect upstream declarations before extraction"
+    }
+  ]
+}

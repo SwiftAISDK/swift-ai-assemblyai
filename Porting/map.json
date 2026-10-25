@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "package": "swift-ai-assemblyai",
+  "status": "coarse-import",
+  "upstream": [
+    {
+      "name": "@ai-sdk/assemblyai",
+      "implementation": [
+        "packages/assemblyai/src"
+      ],
+      "tests": [
+        "packages/assemblyai/src/assemblyai-error.test.ts",
+        "packages/assemblyai/src/assemblyai-transcription-model.test.ts",
+        "packages/assemblyai/src/lazy-schemas.test.ts"
+      ]
+    }
+  ],
+  "swift": {
+    "sources": [
+      "Sources/SwiftAIAssemblyAI/AssemblyAIAudioModels.swift",
+      "Sources/SwiftAIAssemblyAI/AssemblyAIProvider.swift",
+      "Sources/SwiftAIAssemblyAI/AssemblyAITranscriptionParsing.swift"
+    ],
+    "tests": [
+      "Tests/SwiftAIAssemblyAITests/AssemblyAIProviderTests.swift",
+      "Tests/SwiftAIAssemblyAITests/FixtureDownloadTransport.swift",
+      "Tests/SwiftAIAssemblyAITests/TestSupport.swift"
+    ],
+    "resources": []
+  },
+  "differences": [
+    {
+      "kind": "native-adaptation",
+      "reason": "Preserve Swift async/await, Sendable, Foundation transport and existing documented gaps; see Docs/CoreV6Parity.md and PortingStatus.md."
+    }
+  ],
+  "reviewNote": "M6: provider runtime, configuration and focused tests extracted. Existing upstream baseline, capability boundaries and gaps retained.",
+  "canonicalOnlyReferences": [],
+  "canonicalDirectory": "Packages/swift-ai-assemblyai"
+}
