@@ -3,16 +3,19 @@
   "packages": [
     {
       "name": "@ai-sdk/assemblyai",
-      "reviewedVersion": "3.0.68",
+      "reviewedVersion": "3.0.72",
       "ledgerKind": "provider",
-      "evidence": "`AIProviders.assemblyAI`, `AssemblyAITranscriptionModel`, `AssemblyAIProviderTests.swift`",
+      "evidence": "`AIProviders.assemblyAI`, `AssemblyAITranscriptionModel`, `AssemblyAIProviderTests.swift`; 2026-11-01 delta: Docs/WeeklyUpstreamAudit20261101.json",
       "reviewStatus": "imported-reviewed-with-gaps",
-      "archiveIntegrity": "sha512-ODNHbvnpdx+65cQNYpqkUp5qtQBWNnv1sEYYKjEOkG0WGwrKHz9ks9r7l1nCanX4F5/0BtXUfpib7uUJn1MJ4Q==",
-      "sourceRef": "npm:@ai-sdk/assemblyai@3.0.68",
-      "testRef": "682e2dd71456f14f9da33a1b983d1998c3a1184c",
-      "testRefRelationship": "inventory-snapshot-not-release-verified",
-      "contractFamilies": [],
-      "contractReview": "not-imported; inspect upstream declarations before extraction"
+      "archiveIntegrity": "sha512-S+NHP4ev1U8HCS/DCcuXNbJSvTMfmi+vKzayzvmhnAuVr1oHlrWWqEk4Uzbf1NDE+phybdC9sOnLVZ73PUWRGw==",
+      "sourceRef": "npm:@ai-sdk/assemblyai@3.0.72",
+      "testRef": "9b603d36186b75e58d5479445a96c76f6e2d2700",
+      "testRefRelationship": "matching-release",
+      "contractFamilies": [
+        "ProviderV4",
+        "TranscriptionModelV4"
+      ],
+      "contractReview": "2026-11-01: published declarations, source and exact matching-release changed tests reviewed; scoped dispositions and Swift translations are in Docs/WeeklyUpstreamAudit20261101.json. Existing broader product gaps remain; reviewed delta is not full-package parity."
     }
   ]
 }

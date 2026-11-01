@@ -24,7 +24,8 @@
     "tests": [
       "Tests/SwiftAIAssemblyAITests/AssemblyAIProviderTests.swift",
       "Tests/SwiftAIAssemblyAITests/FixtureDownloadTransport.swift",
-      "Tests/SwiftAIAssemblyAITests/TestSupport.swift"
+      "Tests/SwiftAIAssemblyAITests/TestSupport.swift",
+      "Tests/SwiftAIAssemblyAITests/Weekly20261101CredentialsTests.swift"
     ],
     "resources": []
   },
