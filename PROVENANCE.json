@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "package": "swift-ai-assemblyai",
-  "version": "1.1.0",
-  "releaseID": "weekly-upstream-20261101",
+  "version": "1.1.1",
+  "releaseID": "weekly-upstream-20261108",
   "source": {
-    "commit": "ea057797494ab9bb66df8c6bfd8edc10245b20e7",
-    "baseCommit": "ea057797494ab9bb66df8c6bfd8edc10245b20e7",
+    "commit": "8e233ff96fb809445aff9a5c06bb6149a24b94da",
+    "baseCommit": "8e233ff96fb809445aff9a5c06bb6149a24b94da",
     "workingTree": false,
-    "inputsSHA256": "b46f3e07b0a583d6fee81035987d74a06fc5c6109cbdf228144d1172d2c3676e"
+    "inputsSHA256": "987359720075cb67dd8bc45bdc049aee4c5d5a42b67a7eb148e697ce5d18bd77"
   },
   "dependencies": [
     {
@@ -17,28 +17,28 @@
   ],
   "changes": [
     {
-      "id": "weekly-upstream-20261101",
-      "notes": "Add native async throwing apiKeyProvider; resolve a fresh key immediately before every authenticated HTTP send/stream through the shared transport. Preserve static keys, custom header precedence, error/abort propagation, request builders and response parsers. TypeScript Resolvable/promise/function declarations map to an optional Sendable async closure. No other portable wire/runtime change was found in the published delta. Reviewed upstream: @ai-sdk/assemblyai 3.0.68 to 3.0.72. Validation passed: node Scripts/test-packages.mjs (all 52 owning package suites and the compatibility facade); node Scripts/sdk.mjs generate --check; node --test Scripts/tests/*.test.cjs (27 passed); docs-site check and build (100 pages). Live provider calls were not run.",
-      "compatibility": "Minor release for additive native API; existing static settings and call sites remain compatible. Updated direct dependency minimums are recorded in the manifest. Existing documented JS/framework and native product gaps remain; version-delta review does not imply full parity or live-service testing. Explicit custom authentication skips an unused credential supplier, a deliberate native callback-order adaptation."
+      "id": "weekly-upstream-20261108",
+      "notes": "Preserve flat transcription HTTP error messages at upload/submission/poll stages and refresh the versioned request suffix. Reviewed published upstream delta: @ai-sdk/assemblyai 3.0.72 to 3.0.77. Validation passed: node Scripts/test-packages.mjs (all 52 owning packages plus the complete local facade; 3,965 reported tests and 33 explicit live skips); node Scripts/sdk.mjs dev test; node Scripts/sdk.mjs generate --check; node --test Scripts/tests/*.test.cjs (27 passed); core/provider isolation and version resolution; 52 deterministic package exports, 106 catalog consumers and four additional exact retained-minimum graphs; docs-site install/check/build (100 pages); git diff --check. No paid live-service calls were run. The publication pipeline requires successful Swift 6.3.3 CI at the exact canonical source before publishing.",
+      "compatibility": "Patch release for behavior/header corrections without new required owning API. Existing call sites and exact old selectors are retained. Direct minimums change only for concrete API use or required inherited behavior. Version-delta review does not establish full-package parity or live-service acceptance."
     }
   ],
   "canonicalDirectory": "Packages/swift-ai-assemblyai",
   "upstream": [
     {
       "name": "@ai-sdk/assemblyai",
-      "reviewedVersion": "3.0.72",
+      "reviewedVersion": "3.0.77",
       "ledgerKind": "provider",
-      "evidence": "`AIProviders.assemblyAI`, `AssemblyAITranscriptionModel`, `AssemblyAIProviderTests.swift`; 2026-11-01 delta: Docs/WeeklyUpstreamAudit20261101.json",
+      "evidence": "`AIProviders.assemblyAI`, `AssemblyAITranscriptionModel`, `AssemblyAIProviderTests.swift`; 2026-11-01 delta: Docs/WeeklyUpstreamAudit20261101.json; 2026-11-08 delta: Docs/WeeklyUpstreamAudit20261108.json",
       "reviewStatus": "imported-reviewed-with-gaps",
-      "archiveIntegrity": "sha512-S+NHP4ev1U8HCS/DCcuXNbJSvTMfmi+vKzayzvmhnAuVr1oHlrWWqEk4Uzbf1NDE+phybdC9sOnLVZ73PUWRGw==",
-      "sourceRef": "npm:@ai-sdk/assemblyai@3.0.72",
-      "testRef": "9b603d36186b75e58d5479445a96c76f6e2d2700",
+      "archiveIntegrity": "sha512-8YdQP6/LDm0+i/oSrGD2F5sS/68BgJUWTYYU9ZcTU5VjvD/d+XYy6mEkGrDRX9gHwwjoHZ3r0jLAzSYDhj5Sxg==",
+      "sourceRef": "npm:@ai-sdk/assemblyai@3.0.77",
+      "testRef": "0f3a85f92d1ce06ccde01d662407ef83e097a712",
       "testRefRelationship": "matching-release",
       "contractFamilies": [
         "ProviderV4",
         "TranscriptionModelV4"
       ],
-      "contractReview": "2026-11-01: published declarations, source and exact matching-release changed tests reviewed; scoped dispositions and Swift translations are in Docs/WeeklyUpstreamAudit20261101.json. Existing broader product gaps remain; reviewed delta is not full-package parity."
+      "contractReview": "2026-11-08: published declarations/source and exact matching-release changed tests reviewed; native implementations, per-file dispositions and broader retained gaps are recorded in Docs/WeeklyUpstreamAudit20261108.json. Reviewed delta is not full-package or live-service parity."
     }
   ],
   "note": "Independent port. Imported test refs and contract review gaps retain their original status; export is not new upstream parity proof.",
@@ -57,27 +57,27 @@
     },
     {
       "canonicalPath": "Packages/swift-ai-assemblyai/Porting/map.json",
-      "sha256": "750d4d5cf849f2a9cfb4f8b4b1414eeda8dad1c45070c5f3e0a19c7cb2e527d9"
+      "sha256": "c54947c6ba2111333ed1b025c0219d6f3b8535f354d9e37c4b82ee3b16483ee3"
     },
     {
       "canonicalPath": "Packages/swift-ai-assemblyai/README.md",
-      "sha256": "815f04fb896507636dd31901e1c703eb477298756c06a6f65003ec9a1a84c48b"
+      "sha256": "6574fa1119802d5d27ffb1e0a1b8c14480e2815dc660c70688bbd2d619c91882"
     },
     {
       "canonicalPath": "Packages/swift-ai-assemblyai/Sources/SwiftAIAssemblyAI/AssemblyAIAudioModels.swift",
-      "sha256": "a69648ce46c0702b9c795efa2318ba413b4c316728e6e17d3b5474cdb3cdb003"
+      "sha256": "4d361060d9351e8c0104d49ce8a77afd17c6ba84fe0504e6ab6205c488438fa9"
     },
     {
       "canonicalPath": "Packages/swift-ai-assemblyai/Sources/SwiftAIAssemblyAI/AssemblyAIProvider.swift",
-      "sha256": "76c8eb699d625d3befc548932211805f282dc53fc712030737985aad7ba3d068"
+      "sha256": "c101e20afd41b94623f2cc6d4811da1c91fa3e386dd313d172bb729a5baa2600"
     },
     {
       "canonicalPath": "Packages/swift-ai-assemblyai/Sources/SwiftAIAssemblyAI/AssemblyAITranscriptionParsing.swift",
-      "sha256": "7154904440b9f7116da3ea84c7577521b6e48d2a6be8413e61b26e85e54f4295"
+      "sha256": "c8b189fc6ee337d3f40cb69c07aacb8f20cfd9708762a5a56cf36436956a4bc1"
     },
     {
       "canonicalPath": "Packages/swift-ai-assemblyai/Tests/SwiftAIAssemblyAITests/AssemblyAIProviderTests.swift",
-      "sha256": "9f8e4d7d1bc4f473b2e17200c695c715bb080f3c16082de5cd6764779d4cbee9"
+      "sha256": "7abce2af0189177f246e93497b27d651e236315502cf43ae3b52c9521018c6e8"
     },
     {
       "canonicalPath": "Packages/swift-ai-assemblyai/Tests/SwiftAIAssemblyAITests/FixtureDownloadTransport.swift",
@@ -90,6 +90,10 @@
     {
       "canonicalPath": "Packages/swift-ai-assemblyai/Tests/SwiftAIAssemblyAITests/Weekly20261101CredentialsTests.swift",
       "sha256": "95813563d3e3f9899ad8bedc43556c110a7814748c9e8d3ddbd2d6e603cb2465"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-assemblyai/Tests/SwiftAIAssemblyAITests/Weekly20261108ErrorTests.swift",
+      "sha256": "ee63ff14f552c1f7584faa977343a1b2934027cdb71c0bd0f5a581bb75af7dda"
     }
   ]
 }

@@ -1,5 +1,5 @@
 <!-- Generated distribution; edit the canonical repository. -->
-# swift-ai-assemblyai 1.1.0
+# swift-ai-assemblyai 1.1.1
 
 Independent Swift-native port of Vercel AI SDK. Source and upstream dispositions are in PROVENANCE.json and Porting/.
 
@@ -8,7 +8,7 @@ Independent Swift-native port of Vercel AI SDK. Source and upstream dispositions
 Add this package to your SwiftPM dependencies:
 
 ```swift
-.package(url: "https://github.com/SwiftAISDK/swift-ai-assemblyai.git", from: "1.1.0")
+.package(url: "https://github.com/SwiftAISDK/swift-ai-assemblyai.git", from: "1.1.1")
 ```
 
 Products: `SwiftAIAssemblyAI`.
@@ -27,8 +27,7 @@ let provider = try AssemblyAIProvider(configuration: .init(apiKey: "..."))
 ```
 
 Settings accept a custom base URL, headers, query parameters and an injected
-`AITransport`. Models use the common SwiftAIProvider protocols. Existing upstream
-baselines, capabilities and documented gaps remain unchanged.
+`AITransport`. Models use the common SwiftAIProvider protocols.
 
 Run the standalone suite from the canonical checkout:
 
@@ -38,3 +37,6 @@ swift test --package-path Packages/swift-ai-assemblyai
 
 The canonical repository owns all edits. Distribution manifests and repositories
 are generated from the catalog; see `Porting/map.json` and the canonical provider guide.
+## Behavior notes
+
+Transcription errors preserve AssemblyAI's flat `{ "error": "message" }` response as well as the older nested error shape on upload, submission and polling failures.
