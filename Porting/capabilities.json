@@ -8,7 +8,8 @@
       "AIProviders.assemblyAI"
     ],
     "capabilities": [
-      "transcription"
+      "transcription",
+      "speech"
     ],
     "files": false,
     "skills": false,
@@ -18,6 +19,6 @@
         "description": "API key, sent in the `authorization` header. Required unless `apiKey` or `apiKeyProvider` is set in settings."
       }
     ],
-    "notes": "Speech-to-text with AssemblyAI's Universal models. Each call uploads the audio, submits a transcript job and polls until it completes; speaker labels, PII redaction and audio-intelligence results are available through provider options and provider metadata."
+    "notes": "AssemblyAI file transcription with timed words and automatic language detection, plus buffered Speech V4 for MP3 and PCM output."
   }
 ]

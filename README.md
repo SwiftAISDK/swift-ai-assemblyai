@@ -1,5 +1,5 @@
 <!-- Generated distribution; edit the canonical repository. -->
-# swift-ai-assemblyai 1.2.0
+# swift-ai-assemblyai 1.3.0
 
 Independent Swift-native port of Vercel AI SDK. Source and upstream dispositions are in PROVENANCE.json and Porting/.
 
@@ -8,7 +8,7 @@ Independent Swift-native port of Vercel AI SDK. Source and upstream dispositions
 Add this package to your SwiftPM dependencies:
 
 ```swift
-.package(url: "https://github.com/SwiftAISDK/swift-ai-assemblyai.git", from: "1.2.0")
+.package(url: "https://github.com/SwiftAISDK/swift-ai-assemblyai.git", from: "1.3.0")
 ```
 
 Products: `SwiftAIAssemblyAI`.
@@ -18,9 +18,9 @@ Contribute and report issues in the canonical SwiftAISDK repository.
 
 # AssemblyAI for Swift
 
-`SwiftAIAssemblyAI` adds AssemblyAI to [SwiftAISDK](https://github.com/SwiftAISDK/SwiftAISDK), an independent Swift port of the Vercel AI SDK. It ports `@ai-sdk/assemblyai` and supports transcription.
+`SwiftAIAssemblyAI` adds AssemblyAI transcription and buffered text-to-speech to [SwiftAISDK](https://github.com/SwiftAISDK/SwiftAISDK), an independent Swift port of the Vercel AI SDK.
 
-Provider guide with models, options, streaming and errors:
+See the provider guide for models, options and errors.
 
 - [AssemblyAI](https://swiftaisdk.github.io/SwiftAISDK/providers/assemblyai/)
 
@@ -33,6 +33,8 @@ import SwiftAI
 import SwiftAIAssemblyAI
 
 let provider = try AIProviders.assemblyAI(configuration: AssemblyAIProviderSettings())
+let transcription = try provider.transcriptionModel("assemblyai-stt-3-7")
+let speech = provider.speech("assemblyai-tts-1")
 ```
 
 By default the provider reads `ASSEMBLYAI_API_KEY` from the environment; values set in `AssemblyAIProviderSettings` take precedence.
